@@ -360,13 +360,21 @@ header {
     height: 100%;
     opacity: .8;
     border-radius: 5px;
+    transition: opacity: .3s;
+}
+
+.card:hover .card-img-wrapper img {
+    opacity: .5;
 }
 
 .card-info {
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
     bottom: 0;
     padding: 2rem;
     text-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
+    transition: all .5s;
 }
 
 .card-info h2 {
@@ -381,11 +389,33 @@ header {
     font-size: 2rem;
     font-weight: bold;
     color: #ff4881;
+    margin-bottom: 1.5rem;
 }
 
 .card-info p {
     font-family: var(--font-secundary);
     font-weight: 500;
     color: #eee;
-    width: 80%;
+    margin-bottom: 2rem;
+}
+
+.card-info button {
+    width: 8rem;
+    height: 2.5rem;
+    background: #7F00FF;  
+    background: -webkit-linear-gradient(to left, #E100FF, #7F00FF);
+    background: linear-gradient(to left, #E100FF, #7F00FF);;
+    border-radius: 5px;
+    font-family: var(--font-action);
+    font-size: 1rem;
+    border-radius: .5rem;
+    border: none;
+    color: #eee;
+    box-shadow: 0 0.1rem 0.8rem rgba(0, 0, 0, 0.4);
+}
+
+.card:hover .card-info {
+    opacity: 1;
+    visibility: visible;
+    bottom: 0.5rem;
 }
